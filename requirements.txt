@@ -1,0 +1,25 @@
+fastapi
+deepgram-sdk
+deepgram-sdk
+uvicorn[standard]
+websockets
+chromadb
+langchain
+langchain-google-genai
+langchain-community
+pypdf
+python-dotenv
+sentence-transformers
+
+# Audio Processing Dependencies - New Providers
+groq                          # Groq API for STT (Whisper Large V3)
+google-genai                  # Google Gemini API for TTS and AI chat (new library)
+
+# Audio processing utilities
+soundfile
+librosa
+
+# Optional: Fallback TTS providers (uncomment if needed)
+# edge-tts
+# pyttsx3 
+# google-cloud-texttospeech

@@ -1,0 +1,769 @@
+Sri Eshwar College of Engineering – Minimum Cutoff 2025–2026
+Artificial Intelligence and Data Science (AIDS)
+The minimum cutoff marks for the Artificial Intelligence and Data Science department at Sri Eshwar
+College of Engineering for the academic year 2025–2026 are as follows:
+• OC: 190
+• BC: 188.5
+• BCM: 184.5
+• MBC: 184.5
+• SC: 163
+• SCA: 153.5
+• ST: 155.5
+Artificial Intelligence and Machine Learning (AM)
+The minimum cutoff marks for the Artificial Intelligence and Machine Learning department are:
+• OC: 190
+• BC: 188
+• BCM: 184
+• MBC: 183
+• SC: 160
+• SCA: 161
+• ST: 150
+Computer Science and Business Systems (CSBS)
+The minimum cutoff marks for the Computer Science and Business Systems department are:
+• OC: 187.5
+• BC: 187
+• BCM: 182.5
+• MBC: 182.5
+• SC: 162.79
+• SCA: 141.5
+• ST: Not Available
+Computer and Communication Engineering (CCE)
+The minimum cutoff marks for the Computer and Communication Engineering department are:
+• OC: 189
+• BC: 187.5
+• BCM: 184
+• MBC: 184
+• SC: 153
+• SCA: 156
+• ST: Not Available
+Computer Science and Engineering (CSE)
+The minimum cutoff marks for the Computer Science and Engineering department are:
+• OC: 193.5
+• BC: 192
+• BCM: 187.5
+• MBC: 189.5
+• SC: 175
+• SCA: 172.5
+• ST: 191
+Electronics and Communication Engineering (ECE)
+The minimum cutoff marks for the Electronics and Communication Engineering department are:
+• OC: 191.5
+• BC: 190
+• BCM: 185.5
+• MBC: 187.5
+• SC: 160.5
+• SCA: 173
+• ST: 152.5
+Electrical and Electronics Engineering (EEE)
+The minimum cutoff marks for the Electrical and Electronics Engineering department are:
+• OC: 187
+• BC: 185.5
+• BCM: 184.5
+• MBC: 180.5
+• SC: 152.5
+• SCA: 145.5
+• ST: Not Available
+Information Technology (IT)
+The minimum cutoff marks for the Information Technology department are:
+• OC: 192.5
+• BC: 190.5
+• BCM: 187
+• MBC: 187
+• SC: 173.5
+• SCA: 159.5
+• ST: Not Available
+Mechanical Engineering (MECH)
+The minimum cutoff marks for the Mechanical Engineering department are:
+• OC: 184
+• BC: 182
+• BCM: Not Available
+• MBC: 175.5
+• SC: 147
+• SCA: Not Available
+• ST: Not Available
+Cyber Security
+The minimum cutoff marks for the Cyber Security department are:
+• OC: 190.5
+• BC: 189
+• BCM: 186
+• MBC: 185
+• SC: 159
+• SCA: 150.5
+• ST: Not Available
+Sri Eshwar College of Engineering – Complete Website Analysis Dataset
+1. Overview
+Sri Eshwar College of Engineering (SECE) is an engineering institution located in Kondampatti,
+Vadasithur via Coimbatore, Tamil Nadu, India. The college provides engineering education with a focus
+on industry-ready skills, research, innovation, and career development. It aims to produce globally
+competent engineers through value-based education and modern learning facilities.
+The institution emphasizes strong industry connections, innovation, and practical learning to prepare
+students for global technology careers.
+2. Vision and Mission
+Vision
+To be recognized as a premier institution that develops students into globally acknowledged
+engineering professionals.
+Mission
+• Provide outcome-based and value-based engineering education.
+• Encourage research and entrepreneurial culture.
+• Prepare students to become industry-ready professionals.
+• Develop leadership and behavioral skills.
+• Promote social responsibility among students.
+3. Academic Departments
+Sri Eshwar College of Engineering consists of several academic departments that offer specialized
+engineering programs.
+Core Departments
+• Computer Science and Engineering (CSE)
+• Artificial Intelligence and Data Science (AIDS)
+• Artificial Intelligence and Machine Learning (AI & ML)
+• Computer Science and Business Systems (CSBS)
+• Computer and Communication Engineering (CCE)
+• Information Technology (IT)
+• Cyber Security
+• Electronics and Communication Engineering (ECE)
+• Electrical and Electronics Engineering (EEE)
+• Mechanical Engineering (MECH)
+• Science and Humanities
+Each department has experienced faculty members and industry-aligned laboratories.
+4. Learning Areas and Technologies
+For example, the Computer Science department teaches various modern technologies including:
+• Artificial Intelligence
+• Machine Learning
+• Agile Software Development
+• Cybersecurity
+• Augmented Reality and Virtual Reality
+• Object-Oriented Programming
+• Computer Networks
+• Database Management Systems
+• Cloud Technologies
+• Data Science
+• Programming languages such as C, Python, and Java.
+The departments also provide next-generation laboratories for emerging technologies.
+5. Infrastructure and Campus Facilities
+Sri Eshwar College provides modern infrastructure to support education and research.
+Major Facilities
+• Advanced computer laboratories
+• Industry-powered technology labs
+• Smart classrooms
+• Research laboratories
+• Library and digital resources
+• Hostels for students
+• Sports and fitness facilities
+• Auditorium and seminar halls
+The college aims to create an environment where students can develop technical, social, and
+leadership skills.
+6. Placement and Career Development
+The college has a dedicated career development center that prepares students for industry
+placements.
+Placement Highlights
+• Around 200 companies visit the campus every year.
+• Students are placed in 120+ multinational companies.
+• Highest salary package: ₹44 LPA.
+• Average salary package: around ₹10 LPA for top placements.
+Top Recruiters
+• Microsoft
+• Amazon
+• Dell Technologies
+• Cognizant
+• Infosys
+• Wipro
+• Accenture
+• Zoho
+• Wells Fargo
+• Juspay
+The placement cell also provides industry mentorship and training sessions for students.
+7. Student Placement Statistics
+• Over 600 students placed in 2025.
+• Many students receive offers above ₹10 LPA.
+• Placement training programs include aptitude training, soft skills, and mock interviews.
+8. Awards and Achievements
+The institution has received several recognitions including:
+• Best Industry Linked Emerging Engineering Institute Award by AICTE-CII.
+• Best Placement and Career Building Award by All India Technical and Management Council.
+• Sustainable Institute Industry Partnership Award.
+These awards highlight the college’s commitment to industry collaboration and career development.
+9. Events and Technical Activities
+The college organizes several technical and academic events throughout the year.
+Major Events
+• Gameathon
+• Ideathon
+• Freshathon Project Expo
+• Guest lectures and technical workshops
+• National Science Day celebrations.
+These events encourage innovation, teamwork, and technical creativity.
+10. Research and Innovation
+The college promotes research and innovation through:
+• Faculty research projects
+• International conferences
+• Patents and publications
+• Innovation labs and research centers
+Faculty members regularly participate in faculty development programs and research activities.
+11. Student Support and Welfare
+The institution provides various student support systems including:
+• Career development training
+• Industry mentorship programs
+• Placement preparation workshops
+• SC/ST welfare cell for student support.
+These initiatives ensure equal opportunities and academic success for students.
+12. Contact Information
+Sri Eshwar College of Engineering
+Kondampatti (Post), Vadasithur (via),
+Coimbatore – 641202
+Tamil Nadu, India.
+Phone: +91 97153 17171
+Email: sece@sece.ac.in
+Distance:
+• 34.5 km from Coimbatore International Airport
+• 29 km from Gandhipuram Bus Stand.
+13. Key Facts Summary
+Category Details
+Location Coimbatore, Tamil Nadu
+Programs UG, PG, Doctorate
+Departments 10+ engineering departments
+Highest Package ₹44 LPA
+Companies Visiting ~200 per year
+Category Details
+Recruiters Microsoft, Amazon, Zoho, Dell
+Students Placed 600+
+Department Achievements – Sri Eshwar College of Engineering
+Institutional Achievements
+Sri Eshwar College of Engineering has received several awards and recognitions for excellence in
+engineering education, industry collaboration, and student development.
+• The institution received the Best Industry Linked Emerging Engineering Institute Award from
+AICTE-CII in 2014 among 952 engineering colleges in India.
+• The college was honored with the Best Placement and Career Building Award by the All India
+Technical and Management Council during the 3rd Annual Corporate Summit.
+• Sri Eshwar College received the Sustainable Institute Industry Partnership Award from the
+Society for Educational and Entrepreneurship Development (SEED) under the category of
+upcoming engineering colleges with strong potential.
+• The institution was recognized with the Best Industry Interface Institute Award by the 24MRC
+Network in 2015.
+• The college received the Best Organization Encouraging Entrepreneurs in MSME Award from
+ASSOCHAM in 2015.
+• Sri Eshwar College secured the 9th rank in the DATAQUEST Top T-Schools Survey in 2016.
+• The college was also awarded the National Level Award for Best Professional Institute for
+Skill Development by the Honorable Union Minister Rajeev Pratap Rudi.
+• The principal of the institution, Dr. Sudha Mohanram, received the Icon of Coimbatore Award
+from Rathinam Group of Institutions.
+• The institution has also received recognition for sustainability initiatives such as the Igen
+Green Day Award and SDG Action Award 2024.
+Department Student Achievements
+Department Achievements – Sri Eshwar College of Engineering
+Computer Science and Engineering (CSE)
+• Students were selected among the Top 10 teams in Volkswagen Imbiothon 2025.
+• Students were selected among 75 students nationwide for the NXP Women in Tech
+Program.
+• Students were recognized among India’s Top 80 Adobe Student Ambassadors.
+• Students secured Top 10 position in Hackathrone 2025.
+• Students secured 3rd place in the Samartha 36-Hour National Level Hackathon.
+• Students received internship offers through Hack It On'25.
+• Students won the Hack the Horizon Hackathon with a ₹15,000 prize.
+• Students won Silver in the Hack the Future Hackathon organized by Devpost, receiving $650
+prize and $1000 credits.
+Artificial Intelligence and Data Science (AI&DS)
+• Students ranked among India’s Top 80 Adobe Student Ambassadors.
+• Students secured 2nd place in SMARTX Hackathon 2025.
+• Students achieved 4th place in Void.v1 Hackathon.
+• Students won Second Prize in TANCAM Hackathon with ₹25,000 award.
+• Students secured Second place in a National Hackathon with ₹7,000 reward.
+Computer and Communication Engineering (CCE)
+• Students were selected among the Top 10 teams in Volkswagen Imbiothon 2025.
+• Students became Winners of Quest Global Ingenum 2025.
+• Students secured 4th place in Void.v1 Hackathon.
+• Students became Winners of Instaventure.AI Rapid Prototyping Hackathon.
+Electronics and Communication Engineering (ECE)
+• Students were selected among the Top 10 teams in Volkswagen Imbiothon 2025.
+• Students won the Smart India Pitch Award.
+• Students were selected among 75 nationwide participants in the NXP Women in Tech
+Program.
+• Students secured 3rd place in Samartha 36-Hour National Level Hackathon.
+Electrical and Electronics Engineering (EEE)
+• Students developed a sustainable shore energy project and won the Maker’s Arena 24-Hour
+Hardware Hackathon with ₹3 lakh StartupTN funding.
+• Students won the Circuit Debugging Technical Symposium competition.
+• Students advanced to the second round of Hackfest’24 at New Horizon College, Bangalore.
+Information Technology (IT)
+• Students became Winners of Technomeet 2k25.
+• Students secured Runner-up position in Hackstorm 2k25 (36-hour hackathon) with ₹15,000
+prize.
+• Students secured Runner-up position in Kanam 2025 Project Expo hosted by Dr. NGP
+Institute of Technology.
+Computer Science and Business Systems (CSBS)
+• Students won KCE Dhruva Project Expo.
+• Students secured 1st place in OneYes Hackathon with ₹1,250 prize.
+• Students won GUVI DanJr Hackathon and received a paid internship.
+• Students secured 1st place in Biz Flare competition.
+• Students secured 2nd place in NEC Startup Entrepreneurship Summit among 1050
+participants with an innovative startup idea.
+Mechanical Engineering (MECH)
+• Students won 1st prize in Thiran 2.0 E-Bike Competition at Jansons Institute of Technology.
+• Students secured 5th place in the SIEP India 4.0 E-Bike Competition in Bhopal.
+• Team Electric Thrivers became Runner-up in Hill-Climb Test Award (E-Bike Design Challenge).
+• Students secured 3rd place in Drone Racing at Krishnecs 2k24.
+• Students won 1st prize in National Level Hackatheist Contest with ₹10,000 prize.
+• Students secured 2nd prize in a Project Contest at Sri Krishna College of Engineering.
+• Students won 1st prize in MEQUEST 2023 Project Pitch for an Automated Guided Vehicle
+System.
+Institution-Level Achievements
+• Best Industry Linked Emerging Institute Award by AICTE-CII.
+• Best Placement and Career Building Award by All India Technical and Management Council.
+• Sustainable Institute Industry Partnership Award by SEED.
+• Best Industry Interface Institute Award by 24MRC Network.
+• Best Organization Encouraging Entrepreneurs in MSME by ASSOCHAM.
+• Ranked 9th in DataQuest Top T-Schools Survey 2016.
+Centre for Higher Education – Keywords and Detailed Content
+Higher Education Support
+The Centre for Higher Education at Sri Eshwar College of Engineering supports students who want to
+pursue postgraduate education such as MS, MBA, or PhD in foreign universities. The centre provides
+structured guidance and preparation programs for global education opportunities.
+Core Activities
+Overseas Education Guidance
+The centre helps students understand global education pathways, including admission processes,
+university selection, and scholarship opportunities.
+Keywords
+• Higher education abroad
+• International universities
+• Global academic opportunities
+• Overseas admission guidance
+• Study abroad preparation
+Competitive Exam Preparation
+Students receive training and coaching for international entrance examinations required for higher
+education abroad.
+Keywords
+• GRE preparation
+• TOEFL preparation
+• IELTS training
+• English proficiency training
+• Graduate admission preparation
+Foreign Language Training
+The centre also provides foreign language training programs that help students prepare for global
+career and academic opportunities.
+Keywords
+• Foreign language training
+• International communication skills
+• Global career readiness
+• Language proficiency programs
+International Exposure Programs
+Semester Abroad Program
+Students can study a semester in foreign universities through academic collaborations and mobility
+programs.
+Keywords
+• Semester abroad
+• Global exchange program
+• International academic mobility
+• Study exchange opportunities
+International Internship Programs
+The institution encourages students to take internships in international organizations or research
+labs.
+Keywords
+• International internships
+• Global industry exposure
+• Research internships abroad
+• International professional experience
+Summer and Winter School Programs
+Students can attend short-term global programs conducted by foreign universities during summer or
+winter semesters.
+Keywords
+• Summer school programs
+• Winter school programs
+• Short-term international courses
+• Global academic workshops
+Global Academic Collaboration
+International Visiting Faculty
+The college invites international faculty members and experts to deliver lectures and workshops for
+students.
+Keywords
+• Visiting international professors
+• global academic collaboration
+• international guest lectures
+• cross-border research interaction
+Career and Higher Education Pathways
+The centre helps students plan different higher education and career paths after graduation.
+Keywords
+• MS abroad
+• MBA abroad
+• PhD abroad
+• global research programs
+• international career pathways
+Skills Developed Through the Centre
+Students gain several important skills while preparing for higher education opportunities.
+Keywords
+• Academic writing
+• Research proposal development
+• Statement of purpose preparation
+• Interview preparation
+• global communication skills
+Objective of the Centre
+The main objective of the Centre for Higher Education is to prepare students for global academic and
+research opportunities through structured training and international exposure programs
+Sri Eshwar College of Engineering – Extracted Contents
+College Overview
+Sri Eshwar College of Engineering is an autonomous engineering institution located in Coimbatore,
+Tamil Nadu, India. The institution aims to create world-class engineers who contribute to a better
+future through innovation, research, and industry-focused education.
+Sri Eshwar About
+The college focuses on experiential learning, industry integration, and holistic student development to
+prepare graduates for global careers.
+UG Programmes Offered
+The institution offers several undergraduate engineering programs:
+• B.E. Computer Science and Engineering
+• B.E. Computer and Communication Engineering
+• B.E. Computer Science and Engineering (Artificial Intelligence and Machine Learning)
+• B.E. Computer Science and Engineering (Cyber Security)
+• B.E. Electrical and Electronics Engineering
+• B.E. Electronics and Communication Engineering
+• B.E. Mechanical Engineering
+• B.Tech Artificial Intelligence and Data Science
+• B.Tech Computer Science and Business Systems
+• B.Tech Information Technology
+Sri Eshwar About
+PG Programmes Offered
+Postgraduate programs include:
+• M.E VLSI Design
+• M.E Computer Science and Engineering
+• M.E Engineering Design
+Sri Eshwar About
+PhD Programmes
+Doctoral research programs are offered across:
+• Engineering
+• Technology
+• Science
+• Humanities disciplines
+The institution is recognized as a research institute by Anna University.
+Sri Eshwar About
+Awards and Accreditations
+Sri Eshwar College has received several awards and recognitions for academic and industry excellence.
+Major recognitions include:
+• Ranked among the Top 15 colleges in Tamil Nadu.
+• Recognized by the National Institutional Ranking Framework (NIRF).
+• Accredited by NAAC.
+• Programs accredited by NBA for departments such as CSE, ECE, EEE, and Mechanical
+Engineering.
+• Awarded the Best Industry Linked Emerging Institute Award by AICTE-CII.
+• Awarded the Best Placement and Career Building Award.
+• Received the Sustainable Institute Industry Partnership Award.
+Sri Eshwar About
+Academic Excellence through Industry Integration
+The college emphasizes strong collaboration with industries to enhance learning.
+Key features include:
+• Industry-designed project-based curriculum
+• Industry experts delivering project-based courses
+• High-performance NVIDIA professional workstations for AI research and automation
+• Hands-on learning experience
+• Highly qualified faculty with 58% holding doctoral degrees
+• Interactive classrooms
+• Innovative learning spaces
+• State-of-the-art laboratories
+Sri Eshwar About
+Industry-integrated education helps students stay aligned with current technological advancements
+and industry requirements.
+Centres of Excellence
+Sri Eshwar provides Centres of Excellence (CoE) to help students learn emerging technologies from
+the first year.
+18 Centres of Excellence
+• Artificial Intelligence and Robotics
+• Data Science
+• Machine Learning
+• Cloud Computing
+• Cyber Security
+• Gaming and Animation
+• Augmented Reality and Virtual Reality
+• Full Stack and App Development
+• Business Analytics
+• System on Chip
+• Embedded and IoT
+• Drone Technologies
+• Networking
+• Electronic Design and Automation
+• Robotics and Industrial Automation
+• 3D Printing and Reverse Engineering
+• E-Vehicles
+• Graphics and Design
+Sri Eshwar About
+These centres allow students to gain skills, build products, solve real-world problems, and obtain
+international certifications.
+Innovation Ecosystem
+Sri Eshwar provides innovation-focused spaces that encourage product development and
+collaboration.
+MakerSpace
+A collaborative environment where students design and build innovative products.
+Collab Space
+A teamwork environment where students prepare for hackathons and work on projects.
+These facilities promote interdisciplinary collaboration and product innovation among students.
+Sri Eshwar About
+Product Development at Sri Eshwar
+Students develop real-world products as part of their learning.
+Examples include:
+• Bill Buddy – Self Billing Kiosk
+• Track Buddy – Bus Tracking System
+• UniOps – Event Management System
+• StaffPulse – Staff Appraisal System
+• LMS – Leave Management System
+• E-Vehicle projects
+Sri Eshwar About
+These projects demonstrate the practical implementation of engineering concepts.
+Startup Accelerator – Ignite
+The Ignite Startup Accelerator supports students who want to build startups.
+Features include:
+• Mentorship from industry experts
+• Collaborative workspaces
+• Technical and business guidance
+• Support to convert ideas into prototypes and successful startups
+Sri Eshwar About
+Research and Development
+The Centre for Research and Development encourages research and innovation.
+Key statistics:
+• 58% faculty members hold PhDs
+• 2200+ Scopus indexed publications
+• 780+ patents published
+• ₹4.08 crore research funding
+• ₹1 crore seed fund grants
+The college hosts 19 advanced research centers supporting cutting-edge research activities.
+Sri Eshwar About
+International Relations and Global Opportunities
+The Centre for International Relations provides global exposure opportunities.
+Programs include:
+• Semester Abroad Programs
+• International Internships
+• Summer and Winter School Programs
+• Overseas Study Programs
+Students can pursue international master's programs through global partnerships with universities.
+Sri Eshwar About
+The institution also offers Japanese and German language training to help students prepare for global
+careers.
+Sri Eshwar About
+Campus Life
+The campus provides a vibrant and positive student environment.
+Activities include:
+• Cultural events
+• Music and dance programs
+• Student clubs and competitions
+• Technical events and hackathons
+Campus life focuses on creativity, teamwork, and personal growth.
+Sri Eshwar About
+Sports Facilities
+The college promotes sports and physical fitness through facilities for:
+• Cricket
+• Basketball
+• Athletics
+• Martial arts
+• Indoor games
+Sports activities help students develop teamwork, leadership, and discipline.
+Sri Eshwar About
+Campus Amenities
+Sri Eshwar offers modern amenities to enhance student life.
+Facilities include:
+• Dining halls and food courts
+• Gym and fitness center
+• Boys and girls salons
+• Medical center
+• Chat corners and recreational spaces
+• Copier center and student service areas
+Sri Eshwar About
+Hostel Facilities
+Hostel facilities provide a comfortable environment for students.
+Features include:
+• Separate hostels for boys and girls
+• Safe and secure campus
+• Comfortable rooms and study areas
+• Recreational spaces
+The hostel environment encourages collaboration, teamwork, and community living.
+Sri Eshwar About
+Admission Cutoff (2025-2026)
+The brochure also includes minimum cutoff marks for different departments under TNEA counseling.
+Departments listed:
+• Artificial Intelligence and Data Science
+• Artificial Intelligence and Machine Learning
+• Computer Science and Business Systems
+• Computer and Communication Engineering
+• Computer Science and Engineering
+• Electronics and Communication Engineering
+• Electrical and Electronics Engineering
+• Information Technology
+• Mechanical Engineering
+• Cyber Security
+Best Department to Choose – Sri Eshwar College of Engineering
+Choosing the best department depends on a student’s interest, career goals, and industry demand.
+Sri Eshwar College of Engineering offers several engineering programs including Computer Science,
+Artificial Intelligence, Electronics, Mechanical, and Information Technology.
+Below is a detailed explanation of major departments and who they are best suited for.
+Computer Science and Engineering (CSE)
+Computer Science and Engineering is one of the most popular departments because of its strong
+demand in the software industry.
+Why choose CSE
+• Focus on programming, software development, and algorithms
+• Covers technologies like AI, data science, and cloud computing
+• High placement opportunities in IT companies
+• Strong research and software engineering foundations
+Students in the CSE department learn programming languages such as Java, Python, C++, and
+database systems along with advanced computing technologies.
+Best for
+Students interested in:
+• Software development
+• Artificial intelligence
+• Data science
+• Technology startups
+Artificial Intelligence and Data Science (AI & DS)
+This department focuses on modern technologies related to intelligent systems and data analysis.
+Why choose AI & DS
+• Growing demand in AI, machine learning, and analytics
+• Focus on big data, predictive analytics, and intelligent systems
+• Strong career opportunities in AI companies and research fields
+The program emphasizes programming, machine learning, and data analysis skills required for modern
+AI applications.
+Best for
+Students interested in:
+• Artificial intelligence
+• Data science
+• Machine learning
+• Research in intelligent systems
+Artificial Intelligence and Machine Learning (AI & ML)
+This program focuses on developing intelligent algorithms and automated systems.
+Why choose AI & ML
+• Focus on deep learning and neural networks
+• Hands-on projects with AI technologies
+• Increasing demand in robotics and automation
+Students learn technologies such as computer vision, natural language processing, and predictive
+analytics.
+Best for
+Students interested in:
+• AI research
+• robotics and automation
+• intelligent software systems
+Information Technology (IT)
+Information Technology focuses on software systems, networks, and IT infrastructure.
+Why choose IT
+• Focus on software engineering and networking
+• Careers in system administration and cloud computing
+• Strong demand in IT services companies
+Best for
+Students interested in:
+• software engineering
+• IT infrastructure
+• cloud technologies
+Electronics and Communication Engineering (ECE)
+ECE focuses on electronics systems and communication technologies.
+Why choose ECE
+• Combines hardware and software skills
+• Careers in telecommunications, embedded systems, and chip design
+Best for
+Students interested in:
+• electronics
+• communication systems
+• embedded systems
+Mechanical Engineering
+Mechanical Engineering deals with machines, manufacturing, and mechanical systems.
+Why choose Mechanical
+• Focus on mechanical design and manufacturing
+• Careers in automotive, robotics, and industrial engineering
+Best for
+Students interested in:
+• machines
+• automobiles
+• manufacturing technology
+Computer and Communication Engineering (CCE)
+CCE combines computer science with communication technologies.
+Why choose CCE
+• Hybrid field of computing and networking
+• Focus on programming, communication systems, and data networks
+Best for
+Students interested in:
+• networking
+• communication technology
+• computer systems
+Simple Answer for Students
+If a student asks “Which department is best?”, a general recommendation is:
+• CSE / AI / Data Science → Best for software and tech careers
+• ECE → Best for electronics and embedded systems
+• Mechanical → Best for core engineering industries
+• IT → Best for software and IT infrastructure careers
+The best department is the one that matches the student’s interest and career goals.
+Hostel Facilities – Sri Eshwar College of Engineering
+Sri Eshwar College of Engineering provides on-campus hostel facilities for both boys and girls to
+ensure a safe and comfortable living environment for students.
+Accommodation
+• Separate hostels are available for male and female students.
+• The campus contains multiple hostel blocks with hundreds of rooms.
+• Rooms are available in 2-sharing, 3-sharing, and 4-sharing options.
+• Students can choose between attached bathroom and non-attached bathroom rooms.
+Each hostel room is furnished with:
+• Bed
+• Study table
+• Chair
+• Wardrobe
+• Internet access (Wi-Fi)
+The hostel environment is designed to provide a home-like atmosphere for students who stay away
+from their families.
+Safety and Security
+Student safety is a major priority in the hostel.
+Security features include:
+• 24-hour security and CCTV surveillance
+• Strict hostel rules and attendance checks
+• Controlled entry and exit timings
+• Ragging-free campus environment
+These measures help maintain a safe and disciplined living environment for students.
+Hostel Amenities
+The hostel provides several facilities to support daily student life.
+Major amenities include:
+• High-speed Wi-Fi internet
+• Gym and fitness facilities
+• Laundry services
+• Recreation areas and common rooms
+• Medical assistance and first aid facilities
+• Water purifiers and drinking water systems
+These facilities ensure that students have both academic and personal comfort while staying in the
+hostel.
+Food and Mess Facilities
+The hostel provides mess facilities that serve regular meals for students.
+Mess Facilities
+• The hostel campus has multiple mess halls with large seating capacity.
+• Students are served nutritious and hygienic meals daily.
+• Meals are available at fixed timings such as breakfast, lunch, and dinner.
+Types of Food
+The mess provides a variety of cuisines including:
+• South Indian food
+• North Indian food
+• Chinese dishes
+• Snacks and beverages
+Food is prepared to provide balanced nutrition for students living on campus.
+Cafeteria and Additional Food Options
+Apart from the hostel mess, the campus also includes canteens and cafeterias where students can
+buy snacks, beverages, and quick meals.
+The cafeteria has a large seating capacity and offers a variety of food options for students throughout
+the day.
+Overall Hostel Experience
+The hostel life at Sri Eshwar College provides students with:
+• Comfortable accommodation
+• Safe and secure environment
+• Nutritious food and dining facilities
+• Opportunities to interact with fellow students
+• Access to recreation and study spaces
+Hostel life helps students develop independence, teamwork, and lifelong friendships while focusing
+on their academic journey.
+Fee Information Response Policy – Sri Eshwar College Assistant
+Tuition Fee Information
+The tuition fees for programs at Sri Eshwar College of Engineering may vary depending on the
+department, admission category, and academic year. For the most accurate and updated fee details,
+students are advised to contact the college reception or admission office.
+Response:
+For detailed information about tuition fees, please contact the college reception or admission office.
+Hostel Fee Information
+Hostel fees depend on factors such as room type, accommodation options, and additional facilities.
+Students should contact the college reception for the latest hostel fee structure.
+Response:
+For the latest hostel fee details, please contact the college reception.
+Overall Fee Details
+The overall cost of studying at Sri Eshwar College may include:
+• Tuition fees
+• Hostel fees
+• Mess charges
+• Examination fees
+• Other academic or administrative charges
+Since these charges may change each academic year, students should verify the details with the
+college directly.
+Response:
+For complete fee information, please contact the college reception or admission office.
+Contact Information
+Sri Eshwar College of Engineering
+Kondampatti (Post), Vadasithur (via),
+Coimbatore – 641202, Tamil Nadu, India
+Phone: +91 97153 17171

@@ -1,0 +1,1 @@
+from rag.chroma_store import load_knowledge_base, query_knowledge_base; load_knowledge_base(); result = query_knowledge_base('highest salary package'); print(result['sources']); print('---'); print(result['context'][:600])
