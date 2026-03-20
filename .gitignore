@@ -155,8 +155,6 @@ recordings/
 .env
 .env.local
 .env.production
-config/api_keys.py
-api_keys.py
 secrets.json
 credentials.json
 
