@@ -27,5 +27,4 @@ edge-tts
 # google-cloud-texttospeech
 
 # Audio playback and processing
-pygame
 pydub
