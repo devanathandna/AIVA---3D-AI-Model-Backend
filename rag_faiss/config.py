@@ -1,11 +1,20 @@
 import os
+import sys
 from dotenv import load_dotenv
 
 load_dotenv()
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
-GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
+if BASE_DIR not in sys.path:
+    sys.path.append(BASE_DIR)
+
+from config.settings import get_rotating_key
+
+# Fetching Gemini key using key rotation method (falls back to generic GEMINI_API_KEY if needed)
+GEMINI_API_KEY = get_rotating_key("GEMINI_AI_API_KEY")
+if not GEMINI_API_KEY:
+    GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 
 # ── Source documents ─────────────────────────────────────────────────
 DATA_DIR = os.path.join(BASE_DIR, "rag_faiss", "data")

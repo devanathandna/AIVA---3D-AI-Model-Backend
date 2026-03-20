@@ -1,5 +1,5 @@
 """
-Text-to-Speech module using Gemini TTS with API key rotation
+Text-to-Speech module using Edge TTS with language-based voice selection
 """
 import os
 import asyncio
@@ -11,208 +11,247 @@ from typing import Optional, Dict, Any, Union, List
 from io import BytesIO
 import json
 
-from google import genai
-from google.genai import types
-from config.api_keys import get_gemini_tts_key
+try:
+    import edge_tts
+except ImportError:
+    raise ImportError("edge_tts not installed. Install with: pip install edge-tts")
 
 logger = logging.getLogger(__name__)
 
 class TTSProcessor:
     def __init__(self):
         """
-        Initialize TTS processor with Gemini TTS
+        Initialize TTS processor with Edge TTS
         """
-        self._client = None
-        
-        # Gemini TTS voice mapping - using Pulcherrima for all
+        # Edge TTS voice mapping by language - Tamil Pallavi as default
         self.voice_mapping = {
-            ("en", "none"): "Pulcherrima",
-            ("en", "happy"): "Pulcherrima", 
-            ("en", "sad"): "Pulcherrima",
-            ("ta", "none"): "Pulcherrima",
-            ("ta", "happy"): "Pulcherrima",
-            ("ta", "sad"): "Pulcherrima"
+            "en": "en-US-AriaNeural",      # English - US Female
+            "ta": "ta-IN-PallaviNeural",   # Tamil - Pallavi (Female) - DEFAULT
+            "hi": "hi-IN-SudhaNeural",     # Hindi - Female
+            "default": "ta-IN-PallaviNeural"  # Default voice (Tamil Pallavi)
         }
         
-    def _get_client(self):
-        """Get Gemini client with rotated API key"""
-        api_key = get_gemini_tts_key()
-        if not api_key:
-            raise Exception("No Gemini TTS API key available")
-        
-        return genai.Client(api_key=api_key)
+        # Emotion mapping for Edge TTS (speech rate adjustments)
+        self.emotion_rate_map = {
+            "happy": 1.25,    # Faster speech
+            "sad": 0.75,      # Slower speech
+            "none": 1.0       # Normal speed
+        }
         
     async def synthesize_speech(
         self, 
         text: str, 
-        language: str = "en", 
+        language: str = "ta",  # Tamil as default
         voice: Optional[str] = None,
         emotion: str = "none"
     ) -> Dict[str, Any]:
         """
-        Convert text to speech using Gemini TTS
+        Convert text to speech using Edge TTS
         
         Args:
             text: Text to synthesize
-            language: Language code ("en", "ta", etc.)
-            voice: Specific voice name (optional)
+            language: Language code ("en", "ta", "hi", etc.)
+            voice: Specific voice name (optional, overrides language selection)
             emotion: Emotion for speech ("happy", "sad", "none")
             
         Returns:
             Dict with audio data and metadata
         """
         try:
-            # Get Gemini client
-            client = self._get_client()
+            # Select voice based on language or use provided voice
+            if voice:
+                selected_voice = voice
+            else:
+                # Use language-mapped voice, or Tamil Pallavi if language not found
+                selected_voice = self.voice_mapping.get(language, self.voice_mapping["default"])
             
-            # Select voice based on language and emotion
-            selected_voice = voice or self.voice_mapping.get((language, emotion), "Pulcherrima")
+            # Get speech rate based on emotion
+            rate = self.emotion_rate_map.get(emotion, 1.0)
             
-            logger.info(f"Synthesizing with Gemini TTS: voice={selected_voice}, emotion={emotion}")
+            logger.info(f"Synthesizing with Edge TTS: voice={selected_voice}, emotion={emotion}, rate={rate}")
             
-            # Run synthesis in thread pool to avoid blocking
-            loop = asyncio.get_event_loop()
-            result = await loop.run_in_executor(
-                None,
-                self._synthesize_with_gemini,
-                text,
-                selected_voice
-            )
+            # Directly call async synthesis (don't use executor)
+            result = await self._synthesize_with_edge_tts_async(text, selected_voice, rate)
             
             return {
                 "success": True,
                 "audio_data": result["audio_data"],
-                "format": "wav",
+                "format": result.get("format", "mp3"),
                 "voice": selected_voice,
                 "language": language,
+                "emotion": emotion,
                 "duration": result["duration"],
                 "size": len(result["audio_data"]),
-                "provider": "gemini_tts"
+                "provider": "edge_tts"
             }
             
         except Exception as e:
-            logger.error(f"Gemini TTS synthesis error: {str(e)}")
+            logger.error(f"Edge TTS synthesis error: {str(e)}")
             return {
                 "success": False,
                 "error": str(e),
                 "audio_data": b"",
-                "format": "wav",
-                "provider": "gemini_tts"
+                "format": "mp3",
+                "provider": "edge_tts"
             }
 
-    def _synthesize_with_gemini(self, text: str, voice_name: str) -> Dict[str, Any]:
-        """Synchronous Gemini TTS synthesis for thread execution"""
+    async def _synthesize_with_edge_tts_async(self, text: str, voice_name: str, rate: float = 1.0) -> Dict[str, Any]:
+        """Async Edge TTS synthesis"""
         try:
-            # Get client with API key
-            client = self._get_client()
+            # Rate is formatted as percentage: +10.00% for 10% faster, -10.00% for 10% slower
+            rate_percent = f"{(rate - 1.0) * 100:+.0f}%"
             
-            # Generate content with TTS configuration
-            response = client.models.generate_content(
-                model="gemini-2.5-flash-preview-tts",
-                contents=text,
-                config=types.GenerateContentConfig(
-                    response_modalities=["AUDIO"],
-                    speech_config=types.SpeechConfig(
-                        voice_config=types.VoiceConfig(
-                            prebuilt_voice_config=types.PrebuiltVoiceConfig(
-                                voice_name=voice_name
-                            )
-                        )
-                    ),
-                ),
-            )
-            
-            # Extract raw PCM bytes with proper error handling
-            if not response.candidates or len(response.candidates) == 0:
-                raise Exception("No candidates in TTS response")
-            
-            candidate = response.candidates[0]
-            if not candidate or not candidate.content:
-                raise Exception("No content in TTS response candidate")
-            
-            if not candidate.content.parts or len(candidate.content.parts) == 0:
-                raise Exception("No parts in TTS response content")
-                
-            part = candidate.content.parts[0]
-            if not part or not hasattr(part, 'inline_data') or not part.inline_data:
-                raise Exception("No inline_data in TTS response part")
-            
-            audio_bytes = part.inline_data.data
-            if not audio_bytes:
-                raise Exception("No audio data in TTS response")
-            
-            # Convert PCM to proper WAV format
-            wav_data = self._pcm_to_wav(audio_bytes)
+            # Call async Edge TTS
+            audio_data = await self._async_synthesize_edge_tts(text, voice_name, rate_percent)
             
             # Estimate duration
-            duration = self._estimate_duration_from_audio(audio_bytes)
+            duration = self._estimate_duration_from_text(text)
             
-            logger.info(f"Gemini TTS synthesis successful: {len(wav_data)} bytes, {duration:.2f}s")
+            logger.info(f"Edge TTS synthesis successful: {len(audio_data)} bytes, {duration:.2f}s")
             
             return {
-                "audio_data": wav_data,
-                "duration": duration
+                "audio_data": audio_data,
+                "duration": duration,
+                "format": "mp3"
             }
             
         except Exception as e:
-            logger.error(f"Gemini TTS generation failed: {str(e)}")
+            logger.error(f"Edge TTS generation failed: {str(e)}")
             raise
 
-    def _pcm_to_wav(self, pcm_data: bytes) -> bytes:
-        """Convert raw PCM data to WAV format"""
+
+    def _synthesize_with_edge_tts(self, text: str, voice_name: str, rate: float = 1.0) -> Dict[str, Any]:
+        """Synchronous Edge TTS synthesis for thread execution"""
         try:
-            # Create WAV file in memory
-            wav_buffer = BytesIO()
+            # Create communicate instance with voice and rate settings
+            # Rate is formatted as percentage: +10.00% for 10% faster, -10.00% for 10% slower
+            rate_percent = f"{(rate - 1.0) * 100:+.0f}%"
             
-            with wave.open(wav_buffer, 'wb') as wf:
-                wf.setnchannels(1)      # Mono
-                wf.setsampwidth(2)      # 16-bit
-                wf.setframerate(24000)  # 24kHz sample rate (Gemini TTS default)
-                wf.writeframes(pcm_data)
+            # Subtle pitch adjustment makes it sound less artificial and more humanic
+            pitch_adjust = "+2Hz"
+            volume_adjust = "+10%"
             
-            wav_data = wav_buffer.getvalue()
-            wav_buffer.close()
+            # Create event loop for async execution
+            try:
+                loop = asyncio.get_event_loop()
+            except RuntimeError:
+                loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(loop)
             
-            return wav_data
+            # Run async function with proper event loop handling
+            audio_data = loop.run_until_complete(
+                self._async_synthesize_edge_tts(text, voice_name, rate_percent, pitch_adjust, volume_adjust)
+            )
+            
+            # Edge TTS returns MP3 - keep it as MP3 for compatibility
+            # MP3 is more efficient and widely supported
+            duration = self._estimate_duration_from_text(text)
+            
+            logger.info(f"Edge TTS synthesis successful: {len(audio_data)} bytes, {duration:.2f}s")
+            
+            return {
+                "audio_data": audio_data,
+                "duration": duration,
+                "format": "mp3"
+            }
             
         except Exception as e:
-            logger.error(f"PCM to WAV conversion failed: {str(e)}")
-            # Return raw PCM data as fallback
-            return pcm_data
+            logger.error(f"Edge TTS generation failed: {str(e)}")
+            raise
 
-    def _estimate_duration_from_audio(self, audio_data: bytes) -> float:
-        """Estimate audio duration from PCM data"""
+    async def _async_synthesize_edge_tts(self, text: str, voice_name: str, rate_percent: str, pitch: str = "+0Hz", volume: str = "+0%") -> bytes:
+        """Async Edge TTS synthesis"""
         try:
-            # For 16-bit mono at 24kHz: 2 bytes per sample, 24000 samples per second
-            bytes_per_second = 24000 * 2
-            duration = len(audio_data) / bytes_per_second
-            return max(0.1, duration)  # Minimum 0.1 seconds
-        except:
-            # Fallback estimation based on text length
-            return len(audio_data) / 48000  # Rough estimate
+            communicate = edge_tts.Communicate(
+                text=text,
+                voice=voice_name,
+                rate=rate_percent,
+                pitch=pitch,
+                volume=volume
+            )
+            
+            audio_buffer = BytesIO()
+            async for chunk in communicate.stream():
+                if chunk["type"] == "audio":
+                    audio_buffer.write(chunk["data"])
+            
+            audio_buffer.seek(0)
+            return audio_buffer.getvalue()
+            
+        except Exception as e:
+            logger.error(f"Edge TTS async synthesis failed: {str(e)}")
+            raise
 
-    def _estimate_duration(self, text: str) -> float:
-        """Estimate audio duration based on text length"""
-        # Rough estimate: ~150 words per minute
+    async def synthesize_speech_stream(
+        self, 
+        text: str, 
+        language: str = "ta",
+        voice: Optional[str] = None,
+        emotion: str = "none"
+    ):
+        """
+        Convert text to speech and yield audio byte chunks directly from Edge TTS
+        """
+        try:
+            if voice:
+                selected_voice = voice
+            else:
+                selected_voice = self.voice_mapping.get(language, self.voice_mapping["default"])
+            
+            rate = self.emotion_rate_map.get(emotion, 1.0)
+            rate_percent = f"{(rate - 1.0) * 100:+.0f}%"
+            
+            pitch_adjust = "+2Hz"
+            volume_adjust = "+10%"
+            
+            logger.info(f"Streaming with Edge TTS: voice={selected_voice}, emotion={emotion}, rate={rate}")
+            
+            communicate = edge_tts.Communicate(
+                text=text,
+                voice=selected_voice,
+                rate=rate_percent,
+                pitch=pitch_adjust,
+                volume=volume_adjust
+            )
+            
+            async for chunk in communicate.stream():
+                if chunk["type"] == "audio":
+                    yield chunk["data"]
+                    
+        except Exception as e:
+            logger.error(f"Edge TTS synthesis streaming error: {str(e)}")
+            raise
+
+    def _estimate_duration_from_text(self, text: str) -> float:
+        """Estimate duration based on text length"""
+        # Average speaking rate: ~150 words per minute
         words = len(text.split())
-        return max(0.5, (words / 150) * 60)
+        # Each word takes approximately 0.4 seconds
+        duration = words * 0.4
+        # Add minimum 0.5 seconds
+        return max(0.5, duration)
 
-    def get_available_voices(self, language: str = "en") -> Dict[str, Any]:
+    def get_available_voices(self, language: str = "ta") -> Dict[str, Any]:
         """Get list of available voices for language"""
-        # Gemini TTS available voices - using only Pulcherrima
-        gemini_voices = {
+        # Edge TTS available voices by language
+        edge_voices = {
             "en": [
-                {"name": "Pulcherrima", "gender": "Female", "description": "Cheerful, expressive"}
+                {"name": "en-US-AriaNeural", "gender": "Female", "description": "US Female"},
             ],
             "ta": [
-                {"name": "Pulcherrima", "gender": "Female", "description": "Expressive (English fallback)"}
+                {"name": "ta-IN-PallaviNeural", "gender": "Female", "description": "Tamil Pallavi (Default)"},
+            ],
+            "hi": [
+                {"name": "hi-IN-SudhaNeural", "gender": "Female", "description": "Hindi Female"},
             ]
         }
         
         return {
-            "provider": "gemini_tts",
+            "provider": "edge_tts",
             "language": language,
-            "voices": gemini_voices.get(language, gemini_voices["en"])
+            "default_language": "ta",
+            "default_voice": "ta-IN-PallaviNeural",
+            "voices": edge_voices.get(language, edge_voices.get("ta", []))
         }
 
     def validate_text_input(self, text: str) -> Dict[str, Any]:
@@ -224,18 +263,18 @@ class TTSProcessor:
                     "error": "Empty text provided"
                 }
             
-            # Check text length (Gemini TTS has limits)
-            if len(text) > 5000:  # Conservative limit
+            # Check text length (Edge TTS has limits)
+            if len(text) > 10000:  # Edge TTS can handle longer text than Gemini
                 return {
                     "valid": False,
-                    "error": f"Text too long: {len(text)} characters (max: 5000)"
+                    "error": f"Text too long: {len(text)} characters (max: 10000)"
                 }
             
             return {
                 "valid": True,
                 "length": len(text),
                 "word_count": len(text.split()),
-                "estimated_duration": self._estimate_duration(text)
+                "estimated_duration": self._estimate_duration_from_text(text)
             }
             
         except Exception as e:
@@ -268,9 +307,9 @@ class TTSProcessor:
         
         return clean_sentences
     
-    async def synthesize_sentences_streaming(self, text: str, language: str = "en", 
+    async def synthesize_sentences_streaming(self, text: str, language: str = "ta", 
                                            voice: str = None, emotion: str = "none") -> List[Dict[str, Any]]:
-        """Synthesize text as streaming sentence chunks"""
+        """Synthesize text as streaming sentence chunks with Edge TTS and Tamil Pallavi as default"""
         try:
             sentences = self.split_into_sentences(text)
             
@@ -289,7 +328,7 @@ class TTSProcessor:
             
             for i, sentence in enumerate(sentences):
                 try:
-                    # Synthesize each sentence
+                    # Synthesize each sentence with Edge TTS
                     result = await self.synthesize_speech(sentence, language, voice, emotion)
                     
                     if result["success"]:
@@ -302,12 +341,10 @@ class TTSProcessor:
                             "format": result["format"],
                             "size": result["size"],
                             "duration": result.get("duration", 0.0),
+                            "voice": result.get("voice", "ta-IN-PallaviNeural"),
                             "is_final": (i == len(sentences) - 1)
                         })
-                        
-                        logger.info(f"TTS chunk {i+1}/{len(sentences)} complete: '{sentence[:40]}...'")
                     else:
-                        logger.error(f"TTS failed for sentence {i+1}: {result.get('error')}")
                         results.append({
                             "success": False,
                             "chunk_id": i,

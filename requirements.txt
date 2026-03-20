@@ -19,7 +19,13 @@ google-genai                  # Google Gemini API for TTS and AI chat (new libra
 soundfile
 librosa
 
-# Optional: Fallback TTS providers (uncomment if needed)
-# edge-tts
+# Edge TTS for enhanced voice synthesis
+edge-tts
+
+# Optional: Additional TTS providers
 # pyttsx3 
 # google-cloud-texttospeech
+
+# Audio playback and processing
+pygame
+pydub

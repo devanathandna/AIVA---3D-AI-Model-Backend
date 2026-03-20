@@ -1,7 +1,29 @@
 import os
 from dotenv import load_dotenv
+import random
 
 load_dotenv()
+
+def get_rotating_key(prefix: str) -> str:
+    """Get a random API key from environment variables matching a prefix (e.g. PREFIX_1 to PREFIX_5).
+    Falls back to trying PREFIX (without number) if no rotation keys are found.
+    """
+    keys = []
+    # Search for indices 1 through 10
+    for i in range(1, 11):
+        key = os.getenv(f"{prefix}_{i}")
+        if key and key.strip() and "your_groq_stt_api_key" not in key:
+            keys.append(key.strip())
+            
+    if keys:
+        return random.choice(keys)
+        
+    # Fallback to base prefix
+    base_key = os.getenv(prefix)
+    if base_key and base_key.strip():
+        return base_key.strip()
+        
+    return ""
 
 BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
@@ -16,7 +38,7 @@ KNOWLEDGE_FILES = {
 	"Dataset": os.path.join(BASE_DIR, "Dataset.txt"),
 }
 WEBSOCKET_HOST = "0.0.0.0"
-WEBSOCKET_PORT = 8000
+WEBSOCKET_PORT = int(os.getenv("PORT", 8000))
 
 # Audio Processing Settings
 AUDIO_SETTINGS = {
@@ -26,9 +48,9 @@ AUDIO_SETTINGS = {
     "max_audio_size": int(os.getenv("MAX_AUDIO_SIZE", "10485760")),  # 10MB default
     "max_audio_duration": int(os.getenv("MAX_AUDIO_DURATION", "300")),  # 5 minutes default
     
-    # TTS Settings (Gemini)
-    "tts_provider": "gemini_tts",
-    "default_voice": os.getenv("DEFAULT_VOICE", "Bard"),
+    # TTS Settings (Edge TTS)
+    "tts_provider": "edge_tts",
+    "default_voice": os.getenv("DEFAULT_VOICE", "ta-IN-PallaviNeural"),
     "speech_rate": int(os.getenv("SPEECH_RATE", "150")),  # words per minute
     "default_tts_language": os.getenv("DEFAULT_TTS_LANGUAGE", "en"),
     

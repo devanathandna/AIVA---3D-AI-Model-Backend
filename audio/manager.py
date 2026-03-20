@@ -118,7 +118,8 @@ class AudioManager:
         get_response_func,
         input_language: str = "auto",
         output_language: str = "en",
-        emotion: str = "none"
+        emotion: str = "none",
+        response_style: str = "auto",
     ) -> Dict[str, Any]:
         """
         Complete audio conversation flow: STT -> Agent -> TTS
@@ -150,17 +151,25 @@ class AudioManager:
             input_text = stt_result["text"]
             detected_language = stt_result.get("language", "unknown")
             is_tamil = stt_result.get("is_tamil", False)
+            is_hindi = stt_result.get("is_hindi", False)
             
             # Create language context for agent
             language_context = {
                 "language": detected_language,
                 "is_tamil": is_tamil,
+                "is_hindi": is_hindi,
                 "confidence": stt_result["confidence"]
             }
             
             # Step 2: Get agent response with language context
             logger.info(f"Getting agent response for: '{input_text}' (detected: {detected_language})")
-            agent_result = await get_response_func(input_text, language_context)
+            agent_result = await get_response_func(
+                input_text,
+                language_context,
+                language=input_language if input_language != "auto" else detected_language,
+                response_style=response_style,
+                output_language=output_language,
+            )
             
             # Validate agent response format
             if not isinstance(agent_result, dict):
@@ -204,7 +213,7 @@ class AudioManager:
             logger.info(f"Final response text for TTS: '{response_text[:50]}...'")
             
             # Step 3: Convert response to speech
-            resolved_output_language = output_language if output_language in {"en", "ta"} else "en"
+            resolved_output_language = output_language if output_language in {"en", "ta", "hi"} else "en"
 
             tts_result = await self.process_text_to_audio(
                 response_text, 
@@ -216,7 +225,9 @@ class AudioManager:
                 "success": True,
                 "input_text": input_text,
                 "input_language": detected_language,
+                "input_language_selected": input_language,
                 "output_language": resolved_output_language,
+                "response_style": response_style,
                 "response_text": response_text,
                 "response_emotion": response_emotion,
                 "audio_data": tts_result.get("audio_data", b""),
@@ -242,15 +253,15 @@ class AudioManager:
         return {
             "stt": {
                 "supported_formats": ["wav", "mp3", "ogg", "flac", "m4a"],
-                "languages": ["en", "ta"],
+                "languages": ["en", "ta", "hi", "auto"],
                 "max_duration": 300,  # seconds
                 "provider": "deepgram"
             },
             "tts": {
-                "supported_formats": ["wav"],
-                "languages": ["en", "ta"],
+                "supported_formats": ["mp3"],
+                "languages": ["en", "ta", "hi"],
                 "emotions": ["none", "happy", "sad"],
-                "provider": "gemini_tts"
+                "provider": "edge_tts"
             },
             "conversation_flow": {
                 "supports_realtime": False,

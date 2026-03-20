@@ -169,14 +169,7 @@ chroma_db/
 *.chroma
 
 # Vector embeddings and indices (can be regenerated)
-rag_faiss/embeddings/
-rag_faiss/pickles/
-embeddings/
-pickles/
-*.faiss
-*.index
-*.pkl
-*.pickle
+
 
 # Model files (usually large)
 models/
