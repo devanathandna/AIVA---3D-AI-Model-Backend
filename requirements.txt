@@ -4,6 +4,7 @@ uvicorn[standard]
 websockets
 python-dotenv
 faiss-cpu
+langchain-text-splitters
 
 # Audio Processing Dependencies - New Providers
 groq                          # Groq API for STT (Whisper Large V3)
